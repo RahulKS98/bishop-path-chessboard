@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border: 1px solid blue;
+}
+
+.black-box {
+  background: black;
+}
+.hovered{
+  background:#276ef1;
+  cursor: pointer;
+}

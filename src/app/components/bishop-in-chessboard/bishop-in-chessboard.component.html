@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body>
+<!--Logic to show chess board-->
+<ng-container *ngFor="let i of getNumberArray(8); let row = index;">
+  <div class="row">
+    <ng-container *ngFor="let j of getNumberArray(8); let column = index;">
+      <div class="box"
+           (mouseenter)="onHover(row, column)"
+           (mouseleave)="onLeave()"
+           [ngClass]="{'black-box': row % 2 == 0 ? column % 2 === 0 :
+           column % 2 != 0,'hovered': tempArray[row][column]}">
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+</body>
+</html>
